@@ -1,0 +1,23 @@
+sum = 0
+cnt = 0
+list1 = []
+with open('test.txt',mode = 'r') as f:
+    while 1:
+        lines = f.readlines()
+        #print(lines)
+        if not lines:
+            break
+        else:
+            for i in lines:
+                cnt = cnt + 1
+                for j in i.split(' '):
+                    if(j.isdigit()):
+                        sum = sum + int(j)
+                        break
+                
+    print("sum is")
+    print(sum)
+    print("\naverage is")
+    print(sum/cnt)
+    
+    f.close()
