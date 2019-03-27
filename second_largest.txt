@@ -1,0 +1,15 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    list1=[]
+    for i in arr:
+        list1.append(i)
+
+    
+    set1 = set(list1)
+    list2=[]
+    for i in set1:
+        list2.append(i)
+    list2.sort()
+    k = len(list2)
+    print(list2[k-2])
