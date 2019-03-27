@@ -1,0 +1,28 @@
+if __name__ == '__main__':
+    list1 =[]
+    list2= []
+    p =0 
+    for _ in range(int(input())):
+        list1.append([])
+        name = input()
+        score = float(input())
+        list2.append(score)
+        list1[p] = [name,score]
+        p = p+1
+    list3 = []
+    k = 0
+    new_set=set(list2)
+    #print(list1)
+    list2=list(new_set)
+    list2.sort()
+    for i in range(0,len(list1)):
+        
+        if(list2[1] == list1[i][1]):
+           list3.append([])
+           list3[k] = list1[i]
+           k = k+1
+    #print(list3)
+    list3.sort()
+    for i in range(0,len(list3)):
+        print(list3[i][0])
+        
